@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="font-family: 'Comic Sans MS'; background-color: pink;">
+    <h1 style="margin-left: 10px; text-align: center;">Generator feedbacków na mpdp</h1>
+    <table style="margin-top: 10px; margin-bottom: 10px; margin-left: auto; margin-right: auto;">
+        <tr>
+            <td id="t1" style="border: 2px solid black; border-collapse: collapse; padding: 10px;"></td>
+            <td id="t2" style="border: 2px solid black; border-collapse: collapse; padding: 10px;"></td>
+            <td id="t3" style="border: 2px solid black; border-collapse: collapse; padding: 10px;"></td>
+            <td id="t4" style="border: 2px solid black; border-collapse: collapse; padding: 10px;"></td>
+        </tr>
+    </table>
+    <script>
+        function dupa(){
+        const intro = [
+            "Debata była na bardzo wysokim poziomie.",
+            "Bardzo przyjemnie słuchało się tej debaty.", 
+            "Debaty są czasem lepsze, a czasem gorsze.", 
+            "Dziękuję wam wszystkim za tę debatę.", 
+            "Poziom tej debaty był bardzo wyrównany.", 
+            "To była ciężka do sędziowania debata.", 
+            "To była dobra debata.",]
+        const se = ["Niestety, zwycięzca może być tylko jeden.",
+        "Po długich obradach w panelu udało nam się dojść do wspólnego werdyktu.",
+        "Co prawda na splicie, ale przychodzimy do was z feedbackiem.",
+        "No, może nie do końca.",
+        "Mimo bliskich porównań, udało nam się wypracować wspólne stanowisko.",
+        "Nie do końca wiemy, co tu się odjebało.",]
+        const ex = ["Następnym razem polecam lepiej zaznaczyć", "Aby wygrać tę debatę należało przede wszystkim udowodnić", "W waszych mowach brakowało mi zaangażowania w", "Za szybko mówiliście, przez co nie do końca wyłapaliśmy", "Wydaje nam się, że niektóre rzeczy można było zrobić inaczej, a w szczególności", "Brakowało mi przede wszystkim", "Na prepie dobrze jakbyście poświęcili więcej czasu na"]
+        const xi = ["impakty", "wypełnienie ciężaru dowodu", "mechanizmy", "fikoła", "komperatywę", "counter-factuala", "extention", "charakterystyki kluczowych aktorów"]
+        t1 = intro[Math.floor(Math.random() * intro.length)];
+        t2 = se[Math.floor(Math.random() * se.length)];
+        t3 = ex[Math.floor(Math.random() * ex.length)];
+        t4 = xi[Math.floor(Math.random() * xi.length)];
+        document.getElementById("t1").innerText = t1
+        document.getElementById("t2").innerText = t2
+        document.getElementById("t3").innerText = t3
+        document.getElementById("t4").innerText = t4
+        }
+    </script>
+<div style="display: flex; align-items: center; justify-content: center">
+    <button onclick="dupa()">Wygeneruj feedback</button>
+</div>
+</body>
+</html>
